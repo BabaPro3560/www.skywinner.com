@@ -1,47 +1,38 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!DOCTYPE html><html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SkyWinner - Resmi Sayfa</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
+  <div class="header">
     <h1>SKYWINNER</h1>
-  </header>
+  </div>  <div class="menu" id="mainMenu">
+    <button onclick="showSection('hakkimizda')">HAKKIMIZDA</button>
+    <button onclick="showSection('mimariler')">MİMARİLER</button>
+    <button onclick="showSection('projeler')">PROJELER</button>
+  </div>  <div class="icerik">
+    <section id="hakkimizda" class="section hidden">
+      <h2>Hakkımızda</h2>
+      <p>SkyWinner, teknoloji ve yazılım alanında yenilikçi çözümler geliştiren bir markadır...</p>
+    </section><section id="mimariler" class="section hidden">
+  <h2>Mimariler</h2>
+  <p>Yakında eklenecek...</p>
+</section>
 
-  <div class="menu-buttons">
-    <button class="button" onclick="toggleContent('hakkimizda')">HAKKIMIZDA</button>
-    <button class="button">MİMARİLER</button>
-    <button class="button">PROJELER</button>
-  </div>
+<section id="projeler" class="section hidden">
+  <h2>Projeler</h2>
+  <p>Yakında eklenecek...</p>
+</section>
 
-  <div id="hakkimizda" class="content" style="display: none;">
-    <h2>Hakkımızda</h2>
-    <p>
-      SkyWinner, teknoloji ve yazılım alanında yenilikçi çözümler geliştiren bir markadır. Mobil işletim sistemi <strong>SeaOS</strong>, PC işletim sistemi <strong>WinnerOS</strong> ve TV platformu <strong>WINTVOS</strong> gibi sistemler için özgün platformlar tasarlamaktadır.
-    </p>
-    <p>
-      SkyWinner, kendi işlemci ailesi olan <strong>SpaceWin</strong> markasını telefon, tablet ve PC cihazlarında kullanır. Bu işlemciler <strong>CoreX mimarisi</strong> ile üretilir: CoreX40 (mobil), CoreX60 (PC).
-    </p>
-    <p>
-      SkyWinner TV cihazlarında ise <strong>Shine</strong> markalı işlemciler kullanılır. Bu işlemcilerin modeli <strong>Pro S</strong>, mimarisi ise <strong>S80</strong> olarak adlandırılmıştır. WINTVOS işletim sistemi Shine Pro S işlemcilerle tam uyumlu çalışmaktadır.
-    </p>
-    <p>
-      SkyWinner ekosistemi telefon, tablet, saat, kulaklık, TV, PC ve USB depolama gibi geniş bir ürün yelpazesinde yayılmakta; katlanabilir ve flip telefon modelleriyle de farklı kullanıcı deneyimleri sunmaktadır.
-    </p>
-  </div>
-
-  <script>
-    function toggleContent(id) {
-      const section = document.getElementById(id);
-      if (section.style.display === "none") {
-        section.style.display = "block";
-      } else {
-        section.style.display = "none";
-      }
+  </div>  <footer>
+    <p>&copy; 2025 SkyWinner. Tüm hakları saklıdır.</p>
+    <a href="mailto:babaproxx988@gmail.com">babaproxx988@gmail.com</a>
+  </footer>  <script>
+    function showSection(id) {
+      document.querySelectorAll(".section").forEach(s => s.classList.add("hidden"));
+      document.getElementById(id).classList.remove("hidden");
     }
-  </script>
-</body>
+  </script></body>
   </html>
