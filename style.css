@@ -1,52 +1,17 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: white;
-}
+body { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: white; color: #000; }
 
-.header {
-  background-color: #00aaff;
-  padding: 40px 0;
-  text-align: center;
-}
+.header { background-color: #00aaff; color: black; text-align: center; padding: 40px 0; font-size: 36px; font-weight: bold; }
 
-.header h1 {
-  margin: 0;
-  font-size: 48px;
-  font-weight: bold;
-  color: black;
-}
+.menu { display: flex; justify-content: center; gap: 20px; padding: 30px 0; }
 
-.menu-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 60px;
-  gap: 20px;
-}
+.menu button { background-color: #00aaff; color: black; border: none; padding: 15px 30px; font-size: 16px; font-weight: bold; border-radius: 12px; cursor: pointer; }
 
-.button {
-  background-color: #00aaff;
-  color: black;
-  text-decoration: none;
-  padding: 15px 30px;
-  font-size: 18px;
-  border-radius: 15px;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-  border: none;
-}
+.icerik { max-width: 800px; margin: auto; padding: 20px; }
 
-.button:hover {
-  background-color: #0077cc;
-  color: white;
-}
+.section { display: block; }
 
-.content {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  color: #000;
-}
+.hidden { display: none; }
+
+footer { text-align: center; padding: 20px; background-color: #f0f0f0; margin-top: 60px; font-size: 14px; }
+
+        
