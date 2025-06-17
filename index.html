@@ -1,38 +1,55 @@
-<!DOCTYPE html><html lang="tr">
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SkyWinner - Resmi Sayfa</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>SkyWinner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="header">
+  <header>
     <h1>SKYWINNER</h1>
-  </div>  <div class="menu" id="mainMenu">
-    <button onclick="showSection('hakkimizda')">HAKKIMIZDA</button>
-    <button onclick="showSection('mimariler')">MİMARİLER</button>
-    <button onclick="showSection('projeler')">PROJELER</button>
-  </div>  <div class="icerik">
+    <div class="nav" id="mainNav">
+      <button onclick="showSection('home')">ANA SAYFA</button>
+      <button onclick="showSection('hakkimizda')">HAKKIMIZDA</button>
+      <button onclick="showSection('mimariler')">MİMARİLER</button>
+      <button onclick="showSection('projeler')">PROJELER</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="home" class="section">
+      <div class="home-buttons">
+        <button onclick="showSection('hakkimizda')">HAKKIMIZDA</button>
+        <button onclick="showSection('mimariler')">MİMARİLER</button>
+        <button onclick="showSection('projeler')">PROJELER</button>
+      </div>
+    </div>
+
     <section id="hakkimizda" class="section hidden">
       <h2>Hakkımızda</h2>
-      <p>SkyWinner, teknoloji ve yazılım alanında yenilikçi çözümler geliştiren bir markadır...</p>
-    </section><section id="mimariler" class="section hidden">
-  <h2>Mimariler</h2>
-  <p>Yakında eklenecek...</p>
-</section>
+      <p>SkyWinner, teknoloji ve yazılım alanında yenilikçi çözümler geliştiren bir markadır. Mobil işletim sistemi <strong>SeaOS</strong>, PC işletim sistemi <strong>WinnerOS</strong> ve TV platformu <strong>WINTVOS</strong> gibi özgün sistemler tasarlamaktadır.</p>
+      <p>SkyWinner, kendi işlemci ailesi olan <strong>SpaceWin</strong> markasını telefon, tablet ve PC cihazlarında kullanır. Bu işlemciler <strong>CoreX mimarisi</strong> ile üretilir: CoreX40 (mobil), CoreX60 (PC).</p>
+      <p>SkyWinner TV cihazlarında ise <strong>Shine</strong> işlemciler bulunur. Modeli <strong>Pro S</strong>, mimarisi <strong>S80</strong>’dir.</p>
+      <p>Ürünler: telefon, tablet, saat, kulaklık, TV, PC, USB depolama – katlanabilir ve flip telefonlar da dahil.</p>
+    </section>
 
-<section id="projeler" class="section hidden">
-  <h2>Projeler</h2>
-  <p>Yakında eklenecek...</p>
-</section>
+    <section id="mimariler" class="section hidden">
+      <h2>Mimariler</h2>
+      <p>Yakında eklenecek...</p>
+    </section>
 
-  </div>  <footer>
-    <p>&copy; 2025 SkyWinner. Tüm hakları saklıdır.</p>
-    <a href="mailto:babaproxx988@gmail.com">babaproxx988@gmail.com</a>
-  </footer>  <script>
-    function showSection(id) {
-      document.querySelectorAll(".section").forEach(s => s.classList.add("hidden"));
-      document.getElementById(id).classList.remove("hidden");
-    }
-  </script></body>
-  </html>
+    <section id="projeler" class="section hidden">
+      <h2>Projeler</h2>
+      <p>Yakında eklenecek...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SkyWinner. Tüm hakları saklıdır. <br>
+    <a href="mailto:babaproxx988@gmail.com">babaproxx988@gmail.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+      </html>
