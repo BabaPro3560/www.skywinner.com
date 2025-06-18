@@ -1,23 +1,15 @@
-// script.js
+function showSection(id) {
+  // Tüm bölümleri gizle
+  document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
 
-document.addEventListener("DOMContentLoaded", () => { showSection('ana'); });
+  // İsteneni göster
+  document.getElementById(id).classList.remove('hidden');
 
-function showSection(id) { // Tüm bölümleri gizle document.querySelectorAll(".section").forEach(section => { section.classList.add("hidden"); });
-
-// Seçilen bölümü göster const selectedSection = document.getElementById(id); if (selectedSection) { selectedSection.classList.remove("hidden"); }
-
-const navBar = document.querySelector(".nav"); const mainButtons = document.querySelector(".main-buttons");
-
-// Ana sayfadaysa üst menü gizli, ana butonlar görünür if (id === "ana") { navBar.classList.add("hidden"); mainButtons.classList.remove("hidden"); } else { navBar.classList.remove("hidden"); mainButtons.classList.add("hidden");
-
-// Aktif sayfanın butonunu gizle
-document.querySelectorAll(".nav button").forEach(btn => {
-  if (btn.dataset.target === id) {
-    btn.classList.add("hidden");
+  // Üst menüyü sadece ana sayfa haricinde göster
+  const menu = document.getElementById('top-menu');
+  if (id === 'ana') {
+    menu.classList.add('hidden');
   } else {
-    btn.classList.remove("hidden");
+    menu.classList.remove('hidden');
   }
-});
-
-} }
-
+}
