@@ -1,74 +1,21 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: white;
-  color: black;
-  text-align: center;
-}
+/* === style.css === */ body { margin: 0; font-family: Arial, sans-serif; background-color: white; color: black; }
 
-header {
-  background-color: #00aaff;
-  color: black;
-  padding: 20px;
-}
+header { background-color: #00aaff; color: black; text-align: center; padding: 20px 0; font-size: 32px; font-weight: bold; }
 
-h1 {
-  margin: 0;
-  font-size: 36px;
-  font-weight: bold;
-}
+.nav { display: flex; justify-content: center; background-color: #00aaff; padding: 10px 0; gap: 15px; }
 
-.nav {
-  margin-top: 10px;
-}
+.nav button { background-color: white; border: none; padding: 10px 20px; border-radius: 10px; font-weight: bold; color: #0077aa; cursor: pointer; }
 
-.nav button {
-  background-color: #0099ee;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
+.home-buttons { display: flex; flex-direction: column; align-items: flex-start; margin: 40px; gap: 20px; }
 
-.home-buttons {
-  margin-top: 60px;
-}
+.home-buttons button { background-color: #00aaff; color: black; border: none; padding: 15px 30px; font-size: 16px; font-weight: bold; border-radius: 12px; cursor: pointer; }
 
-.home-buttons button {
-  background-color: #0099ee;
-  border: none;
-  color: white;
-  padding: 15px 20px;
-  margin: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 12px;
-  cursor: pointer;
-}
+.section { max-width: 800px; margin: 40px auto; padding: 0 20px; }
 
-.section {
-  display: none;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: left;
-}
+footer { text-align: center; background-color: #f0f0f0; padding: 20px 0; margin-top: 40px; font-size: 14px; }
 
-.section:not(.hidden) {
-  display: block;
-}
+.hidden { display: none; }
 
-.hidden {
-  display: none;
-}
+/* Responsive */ @media (orientation: landscape) { .home-buttons { flex-direction: row; justify-content: center; align-items: center; } }
 
-footer {
-  background-color: #f2f2f2;
-  color: #444;
-  padding: 15px;
-  font-size: 14px;
-  margin-top: 40px;
-}
+                         
