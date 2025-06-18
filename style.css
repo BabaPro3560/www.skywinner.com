@@ -1,15 +1,74 @@
-body { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: white; color: #000; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
 
-.header { background-color: #00aaff; color: black; text-align: center; padding: 40px 0; font-size: 36px; font-weight: bold; }
+header {
+  background-color: #00aaff;
+  color: black;
+  padding: 20px;
+}
 
-.menu { display: flex; justify-content: center; gap: 20px; padding: 30px 0; }
+h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+}
 
-.menu button { background-color: #00aaff; color: black; border: none; padding: 15px 30px; font-size: 16px; font-weight: bold; border-radius: 12px; cursor: pointer; }
+.nav {
+  margin-top: 10px;
+}
 
-.icerik { max-width: 800px; margin: auto; padding: 20px; }
+.nav button {
+  background-color: #0099ee;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-.section { display: block; }
+.home-buttons {
+  margin-top: 60px;
+}
 
-.hidden { display: none; }
+.home-buttons button {
+  background-color: #0099ee;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+}
 
-footer { text-align: center; padding: 20px; background-color: #f0f0f0; margin-top: 60px; font-size: 14px; }
+.section {
+  display: none;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.section:not(.hidden) {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  background-color: #f2f2f2;
+  color: #444;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 40px;
+}
