@@ -1,9 +1,7 @@
-// Sayfa yüklendiğinde ana ekranı göster
 document.addEventListener("DOMContentLoaded", () => {
   showSection('ana');
 });
 
-// Bölümler arası geçişi yönet
 function showSection(id) {
   // Tüm bölümleri gizle
   document.querySelectorAll(".section").forEach(section => {
@@ -16,22 +14,24 @@ function showSection(id) {
     selectedSection.classList.remove("hidden");
   }
 
-  // Üst menü sadece 'ana' ekran dışında görünsün
   const navBar = document.querySelector(".nav");
+  const mainButtons = document.querySelector(".main-buttons");
+
+  // Ana sayfadaysa üst menü gizli, ana butonlar açık
   if (id === "ana") {
     navBar.classList.add("hidden");
+    mainButtons.classList.remove("hidden");
   } else {
     navBar.classList.remove("hidden");
-  }
+    mainButtons.classList.add("hidden");
 
-  // Aktif olmayan butonları temizle
-  document.querySelectorAll(".nav button").forEach(btn => {
-    btn.classList.remove("active");
-  });
-
-  // Aktif butonu işaretle
-  const activeButton = document.querySelector(`.nav button[data-target='${id}']`);
-  if (activeButton) {
-    activeButton.classList.add("active");
+    // Aktif sayfanın butonunu gizle
+    document.querySelectorAll(".nav button").forEach(btn => {
+      if (btn.dataset.target === id) {
+        btn.classList.add("hidden");
+      } else {
+        btn.classList.remove("hidden");
+      }
+    });
   }
-    }
+}
